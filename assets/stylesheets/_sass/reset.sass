@@ -1,0 +1,176 @@
+@charset "UTF-8"
+// reset
+//
+.clearfix
+  *zoom: 1
+  &:before
+    display: table
+    content: ""
+    line-height: 0
+  &:after
+    display: table
+    content: ""
+    line-height: 0
+    clear: both
+
+.hide-text
+  font: 0 / 0 a
+  color: transparent
+  text-shadow: none
+  background-color: transparent
+  border: 0
+
+.input-block-level
+  display: block
+  width: 100%
+  min-height: 30px
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section
+  display: block
+
+audio, canvas, video
+  display: inline-block
+  *display: inline
+  *zoom: 1
+
+audio:not([controls])
+  display: none
+
+html
+  font-size: 100%
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
+
+a
+  &:focus
+    outline: thin dotted #333
+    outline: 5px auto -webkit-focus-ring-color
+    outline-offset: -2px
+  &:hover, &:active
+    outline: 0
+
+sub
+  position: relative
+  font-size: 75%
+  line-height: 0
+  vertical-align: baseline
+
+sup
+  position: relative
+  font-size: 75%
+  line-height: 0
+  vertical-align: baseline
+  top: -0.5em
+
+sub
+  bottom: -0.25em
+
+img
+  max-width: 100%
+  width: auto\9
+  height: auto
+  vertical-align: middle
+  border: 0
+  -ms-interpolation-mode: bicubic
+
+#map_canvas img, .google-maps img
+  max-width: none
+
+button, input, select, textarea
+  margin: 0
+  font-size: 100%
+  vertical-align: middle
+
+button, input
+  *overflow: visible
+  line-height: normal
+
+button::-moz-focus-inner, input::-moz-focus-inner
+  padding: 0
+  border: 0
+
+button, html input[type="button"]
+  -webkit-appearance: button
+  cursor: pointer
+
+input
+  &[type="reset"], &[type="submit"]
+    -webkit-appearance: button
+    cursor: pointer
+
+label, select, button
+  cursor: pointer
+
+input
+  &[type="button"], &[type="reset"], &[type="submit"], &[type="radio"], &[type="checkbox"]
+    cursor: pointer
+  &[type="search"]
+    -webkit-box-sizing: content-box
+    -moz-box-sizing: content-box
+    box-sizing: content-box
+    -webkit-appearance: textfield
+    &::-webkit-search-decoration, &::-webkit-search-cancel-button
+      -webkit-appearance: none
+
+textarea
+  overflow: auto
+  vertical-align: top
+
+@media print
+  *
+    text-shadow: none !important
+    color: #000 !important
+    background: transparent !important
+    box-shadow: none !important
+  a
+    text-decoration: underline
+    &:visited
+      text-decoration: underline
+    &[href]:after
+      content: " (" attr(href) ")"
+  abbr[title]:after
+    content: " (" attr(title) ")"
+  .ir a:after
+    content: ""
+  a
+    &[href^="javascript:"]:after, &[href^="#"]:after
+      content: ""
+  pre, blockquote
+    border: 1px solid #999
+    page-break-inside: avoid
+  thead
+    display: table-header-group
+  tr
+    page-break-inside: avoid
+  img
+    page-break-inside: avoid
+    max-width: 100% !important
+  @page
+    margin: 0.5cm
+
+  p, h2, h3
+    orphans: 3
+    widows: 3
+  h2, h3
+    page-break-after: avoid
+
+body
+  margin: 0
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+  font-size: 14px
+  line-height: 20px
+  color: #333333
+  background-color: #ffffff
+
+a
+  color: #0088cc
+  text-decoration: none
+  outline: 0
+  &:hover, &:focus
+    color: #005580
+    text-decoration: underline
+    outline: 0
