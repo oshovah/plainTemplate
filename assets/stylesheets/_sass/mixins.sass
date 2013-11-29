@@ -1,17 +1,40 @@
 @charset "UTF-8"
 // mixins
 //
+// Color
+$white:     #FFFFFF
+$black:     #000000
+$gray:      #5B5B5B
+$purple:    #622167
+//
+$lauftext:  $black
+$header1:   $purple
+$header2:   $purple
+$hover:     $purple
+$lead:      $black
+$navi:      $black
+$navi-hover:$purple
+
+//
+//Style
 =round($r1:0px, $r2:0px, $r3:0px, $r4:0px)
   -webkit-border-radius: $r1, $r2, $r3, $r4
   -moz-border-radius: $r1, $r2, $r3, $r4
   -ms-border-radius: $r1, $r2, $r3, $r4
   -o-border-radius: $r1, $r2, $r3, $r4
   border-radius: $r1, $r2, $r3, $r4
-  
+
+//
+// Retina
 =background-image2x($image_name, $w: auto, $h: auto, $extention: '.jpg')
   background-image: url('../images/' + $image_name + $extention)
   $x2img : $image_name + '@2x' + $extention
- 
   @media all and (-webkit-min-device-pixel-ratio : 1.5)
     background-image: url('../images/' + $x2img)
     background-size: $w $h
+
+//
+// RGBA
+=rgba($r,$g,$b,$a,$fallback)
+  background-color: $fallback
+  background-color: rgba($r, $g, $b, $a)
