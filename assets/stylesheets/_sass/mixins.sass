@@ -38,3 +38,47 @@ $navi-hover:$purple
 =rgba($r,$g,$b,$a,$fallback)
   background-color: $fallback
   background-color: rgba($r, $g, $b, $a)
+
+
+//
+// Transition
+=transition($args...)
+  -webkit-transition : $args
+  -o-transition : $args
+  transition : $args
+
+=transitiondelay($time: 1s)
+  -webkit-transition-delay: $time
+  -o-transition-delay : $time
+  transition-delay: $time
+
+//
+// FullScreen Background
+=fullscreen($image_path, $exten: '.jpg')
+  $image_p : '../images/' + $image_path + '/'
+  width: 100%
+  height: 100%
+  background: url($image_p + '_768' + $exten) no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  $image_p2x : $image_p + '_768' + '@2x' + $exten
+  @media all and (-webkit-min-device-pixel-ratio : 1.5)
+    background-image: url($image_p2x)
+  @media screen and (min-width: 768px)
+    background-image: url($image_p + '_992' + $exten)
+    @media all and (-webkit-min-device-pixel-ratio : 1.5)
+      background-image: url($image_p + '_992' + '@2x' + $exten)
+  @media screen and (min-width: 992px)
+    background-image: url($image_p + '_1200' + $exten)
+    @media all and (-webkit-min-device-pixel-ratio : 1.5)
+      background-image: url($image_p + '_1200' + '@2x' + $exten)
+  @media screen and (min-width: 1200px)
+    background-image: url($image_p + '_1440' + $exten)
+    @media all and (-webkit-min-device-pixel-ratio : 1.5)
+      background-image: url($image_p + '_1440' + '@2x' + $exten)
+  // IE
+  $iepath : 'assets/images/' + $image_path + '/_1200' + $exten
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$iepath}', sizingMethod='scale')
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + $iepath + "', sizingMethod='scale')"
