@@ -85,6 +85,7 @@ capybara-*html
 # sass
 .sass-cache
 .sass-cache/*
+app/assets/stylesheets/.sass-cache
 
 #rvm and rbenv
 .rvmrc
@@ -97,9 +98,6 @@ test/*
 
 # vendor/extensions dummy applications.
 vendor/extensions/**/spec/dummy
-
-# SASS Files
-app/assets/stylesheets/.sass-cache
 
 # DB Stuff
 db/data.yml
