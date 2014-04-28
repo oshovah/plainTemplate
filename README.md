@@ -20,7 +20,7 @@ Official they use LESS, but i made a SASS implementation. The SASS mixing is inc
 Version of Images:
 
 - blume.jpg (200x100)
-- blume@2x.jpg (400x200)
+- blume&commat;2x.jpg (400x200)
 
 retina.js will replace every image in the HTML with the @2x version if the user has a High-Res Monitor (Retina). For CSS/SASS use the image mixin
 
