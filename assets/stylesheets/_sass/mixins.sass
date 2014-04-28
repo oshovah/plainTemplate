@@ -22,7 +22,18 @@ $navi-hover:$purple
   -moz-border-radius: $r1, $r2, $r3, $r4
   -ms-border-radius: $r1, $r2, $r3, $r4
   -o-border-radius: $r1, $r2, $r3, $r4
-  border-radius: $r1, $r2, $r3, $r4
+  border-radius: $r1, $r2, $r3, $r4-
+
+=boxshadow($value...)
+  -webkit-box-shadow: $value
+  box-shadow: $value
+
+=transform($value...)
+  -moz-transform: $value
+  -webkit-transform: $value
+  -o-transform: $value
+  -ms-transform: $value
+  transform: $value
 
 //
 // Retina

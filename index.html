@@ -5,32 +5,39 @@
 <!--[if IE 9 ]>    <html lang="de" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="de-DE" class="no-js"><!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:site_name" content="domain" />
-  <meta property="og:url" content="http://domain.ch/" />
-  <meta property="og:title" content="domain" />
-  <link rel="canonical" href="http://domain.ch/" />
-  <link rel="shortlink" href="http://domain.ch/" />
-  <meta name="dcterms.title" content="domain" />
-  <meta name="dcterms.identifier" content="http://domain.ch/" />
-  <meta property="og:type" content="website" />
 
-  <title>Plain Template</title>
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Website Name" />
+  <meta property="og:url" content="DOMAIN" />
+  <meta property="og:title" content="Page Title" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="description.." />
+
+  <!-- Dublin Core -->
+  <meta name="dcterms.title" content="Page Title" />
+  <meta name="dcterms.identifier" content="Domain" />
+  <meta name="dcterms.language" content="de" />
+  <meta name="dcterms.format" content="text/html" />
+  <meta name="dcterms.creator" content="Dino Meyer, Stirling Tschan, Pino Guentensperger" />
+
+  <!-- Google -->
+  <title>Page Title</title>
   <meta name="description" content="description.." />
-  <meta name="keywords" content="keywords.." />
+  <link rel="canonical" href="Domain" />
 
   <!-- Resource -->
-  <link type="text/css"     rel="stylesheet"    href="assets/stylesheets/styles.css" />
-
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  
   <!-- Apple and Android "add to Home" Icon & Favicon-->
   <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png"/>
   <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -39,7 +46,9 @@
 </head>
 
 <body>
-  <div id="wrapper">
+  <a href="#content-box" class="sr-only">Skip to main content</a>
+
+  <div class="wrapper">
     
     <header class="header_home">
       <nav>
@@ -49,7 +58,7 @@
       </nav>
     </header>
     
-    <section>
+    <section id="content-box">
     
       <article>
         <header>
@@ -81,10 +90,11 @@
   </div>
   
   <!-- Include Library -->
-  <script type="text/javascript" src="assets/javascripts/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="assets/javascripts/jquery.min.js"></script>
   <script type="text/javascript" src="assets/javascripts/modernizr.js"></script>
   <script type="text/javascript" src="assets/javascripts/bootstrap.js"></script>
   <!-- Include JavaScript that load after DOM -->
+  <script type="text/javascript" src="assets/javascripts/function.js"></script>
   <script type="text/javascript" src="assets/javascripts/my.js"></script>
   <script type="text/javascript" src="assets/javascripts/retina.js"></script>
   <!-- JavaScript END-->
