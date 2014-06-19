@@ -6,10 +6,10 @@ A simple plain HTML/CSS Template with jQuery, Bootstrap, SASS and other usefull 
 Includes
 =============
 
-- Bootstrap-sass 3.1.1
-- jQuery 1.9 (for IE8 Support)
-- Modernizer 2.6.2
-- Retina.js 1.1.0
+-
+- jQuery 1.11.1 (for IE8 Support)
+- Modernizer 2.8.2
+- Retina.js 1.3.0
 
 ## Retina.JS
 
