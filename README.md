@@ -41,6 +41,3 @@ in .sass
 
 
 Pretty self explanatory.
-
-## refineryCMS
-rails new app -m http://refinerycms.com/t/edge
