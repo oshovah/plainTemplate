@@ -8,19 +8,8 @@ html
   height: 100%
 body
   min-height: 100%
-  +glunz-light()
   font-size: 14px
   line-height: 1.2em
-
-.wrapper
-  width: 1024px
-  position: relative
-  margin: 0 auto
-  overflow-x: hidden
-  font-size: 14px
-  line-height: 20px
-  padding: 0px
-  +fullscreen('images/bla', '.jpg')
 
 svg
   max-height: 100%
@@ -28,9 +17,9 @@ svg
 // Font
 //
 h1
-  font-size: 1.5em
+  font-size: 1.5rem
 h2
-  font-size: 1em
+  font-size: 1rem
 
 // Links
 //
@@ -87,17 +76,3 @@ a
   border-top: 10px solid transparent
   border-bottom: 10px solid transparent
   border-right: 10px solid $black
-
-
-// Header
-.header
-  display: block
-  position: relative
-  height: 229px
-  padding: 0px
-  +round(0px, 5px, 5px, 0px)
-
-.header_home
-  @extend .header
-  height: 523px
-  +image(header/himmel, 200px, 523px, '.jpg')
