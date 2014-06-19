@@ -1,5 +1,8 @@
 @charset "UTF-8";
-
+// Import Normalize
+@import "normalize.css";
+// Import foundation
+@import "foundation.min.css";
 // Import Custom
 @import "_sass/mixins";
 @import "_sass/scaffold";

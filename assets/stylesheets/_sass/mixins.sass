@@ -14,6 +14,7 @@ $hover:       $purple
 $lead:        $black
 $navi:        $black
 $navi-hover:  $purple
+$link:        $purple
 
 //
 // Font
@@ -51,6 +52,37 @@ $navi-hover:  $purple
   -o-transform: $value
   -ms-transform: $value
   transform: $value
+
+=transition($value...)
+  -webkit-transition: $value
+  -moz-transition: $value
+  -ms-transition: $value
+  -o-transition: $value
+  transition: $value
+
+=animation($value...)
+  -webkit-animation: $value
+  -moz-animation: $value
+  -ms-animation: $value
+  -o-animation: $value
+  animation: $value
+
+// keyframes mixin
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+//
+// Calc
+=calc($property, $expression)
+  #{$property}: -webkit-calc(#{$expression})
+  #{$property}: calc(#{$expression})
 
 //
 // Retina

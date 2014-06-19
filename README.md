@@ -1,14 +1,15 @@
 plainTemplate
 =============
 
-A simple plain HTML/CSS Template with jQuery, Bootstrap, SASS and other usefull stuff.
+A simple plain HTML/CSS Template with jQuery, Foundation, SASS and other usefull stuff.
 
 Includes
 =============
 
--
+- Foundation 5.2.3
 - jQuery 1.11.1 (for IE8 Support)
 - Modernizer 2.8.2
+- FastClick 1.0.2
 - Retina.js 1.3.0
 
 ## Retina.JS
@@ -41,3 +42,7 @@ in .sass
 
 
 Pretty self explanatory.
+
+## Foundation
+
+<a href="http://foundation.zurb.com/docs/" target="_blank">more Infos</a>

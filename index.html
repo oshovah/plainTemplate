@@ -46,8 +46,10 @@
   <link rel="canonical" href="Domain" />
 
   <!-- Resource -->
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<!--   <%#= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%#= javascript_include_tag "application", "data-turbolinks-track" => true %> -->
+  <script type="text/javascript" src="assets/javascripts/modernizr.js"></script>
+  <link rel="stylesheet" href="assets/stylesheets/styles.css" />
   
   <!-- Apple and Android "add to Home" Icon & Favicon-->
   <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png"/>
@@ -62,58 +64,118 @@
 </head>
 
 <body>
-  <a href="#content-box" class="sr-only">Skip to main content</a>
 
-  <div class="wrapper">
-    
-    <header class="header_home">
-      <nav>
-        <ul>
-          <li>Your menu</li>
+  <header class="header_home">
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name"><h1><a href="#">PlainTemplate</a></h1></li> 
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="has-dropdown"> <a href="#">Right Button Dropdown</a>
+            <ul class="dropdown">
+              <li><a href="#">First link in dropdown</a></li>
+            </ul>
+          </li>
         </ul>
-      </nav>
-    </header>
-    
-    <section id="content-box">
-    
-      <article>
-        <header>
-          <h2>Article title</h2>
-          <p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-        </header>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-      </article>
+        <ul class="left">
+          <li><a href="#">Plain</a></li>
+          <li><a href="#">Yay!</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+
+  <br /><br />
+
+  <div class="row">
+    <div class="large-12 columns">
       
-      <article>
-        <header>
-          <h2>Article title</h2>
-          <p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-        </header>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-      </article>
+      <section id="content-box">
       
-    </section>
-    
-    <aside>
-      <h2>About section</h2>
-      <p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    </aside>
-    
-    <footer>
-      <p>Copyright 2009 Your name</p>
-    </footer>
+        <article>
+          <header>
+            <h2>Article title</h2>
+            <p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
+          </header>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </article>
+        
+        <article>
+          <header>
+            <h2>Article title</h2>
+            <p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
+          </header>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </article>
+  
+  
+        <div class="row">
+          <div class="large-12 columns">
+            <div class="callout panel">
+              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-6 medium-6 columns">
+            <div class="callout panel">
+              <p>Six columns</p>
+            </div>
+          </div>
+          <div class="large-6 medium-6 columns">
+            <div class="callout panel">
+              <p>Six columns</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-4 medium-4 small-4 columns">
+            <div class="callout panel">
+              <p>Four columns</p>
+            </div>
+          </div>
+          <div class="large-4 medium-4 small-4 columns">
+            <div class="callout panel">
+              <p>Four columns</p>
+            </div>
+          </div>
+          <div class="large-4 medium-4 small-4 columns">
+            <div class="callout panel">
+              <p>Four columns</p>
+            </div>
+          </div>
+        </div>
+  
+        
+      </section>
+      
+      <aside>
+        <h2>About section</h2>
+        <p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </aside>
+      
+      <footer>
+        <p>Copyright 2009 Your name</p>
+      </footer>
+
+    </div>
     
   </div>
   
   <!-- Include Library -->
   <script type="text/javascript" src="assets/javascripts/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/javascripts/modernizr.js"></script>
-  <script type="text/javascript" src="assets/javascripts/bootstrap.js"></script>
+  <script type="text/javascript" src="assets/javascripts/foundation.min.js"></script>
   <!-- Include JavaScript that load after DOM -->
   <script type="text/javascript" src="assets/javascripts/function.js"></script>
   <script type="text/javascript" src="assets/javascripts/my.js"></script>
   <script type="text/javascript" src="assets/javascripts/retina.js"></script>
   <!-- JavaScript END-->
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 
 </html>
